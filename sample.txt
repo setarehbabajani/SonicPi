@@ -1,0 +1,54 @@
+use_bpm 110
+sample :elec_filt_snare, rate: -1
+live_loop :rummut do
+  sample :drum_heavy_kick
+  sleep 1
+  sample :drum_snare_hard
+  sleep 1
+  sample :drum_heavy_kick
+  sleep 1
+  sample :drum_snare_hard
+  sleep 1
+end
+live_loop :flibble do
+  sample :bd_haus, rate: 1
+  sleep 0.5
+  #live_loop :breakbeat_backbeat do
+  #sample :loop_breakbeat
+  #sleep 2
+  #end
+  
+end
+
+use_random_seed 1
+4.times do
+  play :A
+  sleep 1
+end
+
+sleep 10
+live_loop :samples do
+  sample :bd_fat
+  sleep 0.25
+  sample :bd_haus
+  sleep 0.25
+  use_random_seed 1
+end
+sleep 5
+use_random_seed 1
+3.times do
+  play :A
+  sleep 1
+end
+sleep 2
+5.times do
+  live_loop :drums do
+    sample :drum_cymbal_closed
+    sleep 0.5
+  end
+end
+
+
+
+
+
